@@ -18,16 +18,10 @@
 *.color7:     #BFBFBF
 *.color15:    #E6E6E6
 
-URxvt*background:       black
 URxvt.depth:            32
 URxvt.font:             xft:inconsolata:size=11
 URxvt.scrollBar:        false
-URxvt.cursorColor:      white
-URxvt.transparent:      true
-URxvt.tintColor:        #fff
-URxvt.shading:          20
-URxvt.fading:           20
-URxvt.background:       [80]#06060a
+URxvt.fading:           30
 
 URxvt.perl-ext-common: default,matcher,clipboard
 URxvt.url-launcher:    /usr/bin/xdg-open

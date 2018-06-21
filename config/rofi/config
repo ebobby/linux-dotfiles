@@ -1,21 +1,26 @@
-! Enable the extended coloring options
-rofi.color-enabled: true
-rofi.color-window: argb:992f343f, argb:00000000,  900000,
-rofi.color-normal: argb:00000000, #c9c9ff, 000000, 000000,   #ff4c4c
-rofi.color-active: argb:00000000, #c9c9ff, argb:00000000,   argb:00000000, #ff4c4c
-rofi.color-urgent: #2f343f, #2f343f, #2f343f, #2f343f, #2f343f
-
-rofi.separator-style: none
-rofi.sidebar-mode: true
-rofi.bw: 1
-rofi.columns: 1
-rofi.padding: 16
-
-rofi.yoffset: 0
-!rofi.fake-transparency: false
-rofi.location: 0
-rofi.width: 500
-rofi.font: Ubuntu Bold 12
-rofi.show-icons: true
-rofi.lines: 12
+rofi.modi: drun
+rofi.font: Ubuntu Bold 15
+rofi.bw: 3
 rofi.fixed-num-lines: true
+rofi.separator-style: none
+rofi.show-icons: true
+rofi.hide-scrollbar: true
+rofi.fake-transparency: true
+
+rofi.width:              40
+rofi.column:             4
+rofi.location:           0
+rofi.lines:              8
+rofi.padding:            40
+rofi.sidebar-mode:       false
+rofi.fullscreen:         false
+
+rofi.color-enabled: true
+!!                  bg       border   separator
+rofi.color-window: #282A36, #BD93F9, #BD93F9
+
+!!                  bg       fg       bg-alt   hl-bg    hl-fg
+rofi.color-normal:  #282A36, #CAA9FA, #282A36, #BD93F9, #E6E6E6
+rofi.color-active:  #F4F99D, #4D4D4D, #F4F99D, #5AF78E, #4D4D4D
+rofi.color-urgent:  #FF6E67, #4D4D4D, #FF6E67, #FF5555, #4D4D4D
+rofi.color-urgent:  #282A36, #282A36, #282A36, #282A36, #282A36
