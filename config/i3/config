@@ -127,7 +127,7 @@ set $ws1    "1:  "
 set $ws2    "2:  "
 set $ws3    "3:  "
 set $ws4    "4:  "
-set $ws5    "5:  "
+set $ws5    "5:  "
 set $ws6    "6:  "
 set $ws7    "7:  "
 set $ws8    "8:  "
@@ -208,12 +208,13 @@ bindsym XF86AudioMute              exec --no-startup-id amixer set Master toggle
 bindsym XF86AudioPrev              exec --no-startup-id playerctl previous
 bindsym XF86AudioNext              exec --no-startup-id playerctl next
 bindsym XF86AudioPlay              exec --no-startup-id playerctl play-pause
-bindsym $mod+Print                 exec scrot -e 'mv $f ~/Pictures/Screenshots/ && notify-send "Screenshot Taken"'
+bindsym $mod+Print                 exec --no-startup-id gnome-screenshot --interactive
 
 assign [class="Emacs"] $ws2
 assign [class="Google-chrome"] $ws1
 assign [class="Spotify"] $ws4
 assign [class="Gimp"] $ws6
+assign [class="Io.elementary.files"] $ws5
 for_window [class="Spotify"] move to workspace $ws4
 
 # set specific windows to floating mode

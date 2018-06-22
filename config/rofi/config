@@ -1,4 +1,4 @@
-rofi.modi: combi,drun,window
+rofi.modi: drun,window
 rofi.font: Ubuntu Bold 15
 rofi.bw: 3
 rofi.fixed-num-lines: true
@@ -12,7 +12,7 @@ rofi.column:             4
 rofi.location:           0
 rofi.lines:              8
 rofi.padding:            40
-rofi.sidebar-mode:       false
+rofi.sidebar-mode:       true
 rofi.fullscreen:         false
 
 rofi.color-enabled: true
