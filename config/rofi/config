@@ -1,4 +1,4 @@
-rofi.modi: drun
+rofi.modi: combi,drun,window
 rofi.font: Ubuntu Bold 15
 rofi.bw: 3
 rofi.fixed-num-lines: true
@@ -20,7 +20,7 @@ rofi.color-enabled: true
 rofi.color-window: #282A36, #BD93F9, #BD93F9
 
 !!                  bg       fg       bg-alt   hl-bg    hl-fg
-rofi.color-normal:  #282A36, #CAA9FA, #282A36, #BD93F9, #E6E6E6
+rofi.color-normal:  #282A36, #F8F8F2, #282A36, #4D4D4D, #BFBFBF
 rofi.color-active:  #F4F99D, #4D4D4D, #F4F99D, #5AF78E, #4D4D4D
 rofi.color-urgent:  #FF6E67, #4D4D4D, #FF6E67, #FF5555, #4D4D4D
 rofi.color-urgent:  #282A36, #282A36, #282A36, #282A36, #282A36

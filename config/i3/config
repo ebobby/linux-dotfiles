@@ -12,9 +12,9 @@
 set $mod Mod4
 
 # i3-gaps
-smart_gaps on
-gaps inner 5
-gaps outer 3
+#smart_gaps on
+gaps inner 0
+gaps outer 0
 
 # control focused window when follows the mouse movements
 focus_follows_mouse no
@@ -39,21 +39,23 @@ exec_always --no-startup-id unclutter
 exec_always --no-startup-id xset r rate 200 30
 # Notifications
 exec_always --no-startup-id dunst
+# Polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Dropbox
-#exec_always --no-startup-id dropbox
+exec_always --no-startup-id dropbox
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:Inconsolata Bold 10
 
-bar {
-  status_command polybar
-	status_command i3blocks -c ~/.config/i3/i3blocks.conf
-  tray_output primary
-  position bottom
-	mode dock
-}
+#bar {
+#  status_command polybar
+#	status_command i3blocks -c ~/.config/i3/i3blocks.conf
+#  tray_output primary
+#  position bottom
+#	mode dock
+#}
 
 set $term --no-startup-id urxvt
 
@@ -121,13 +123,13 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1    "1:  "
-set $ws2    "2:  "
-set $ws3    "3:  "
-set $ws4    "4:  "
-set $ws5    "5: ♫ "
-set $ws6    "6:  "
-set $ws7    "7:  "
+set $ws1    "1:  "
+set $ws2    "2:  "
+set $ws3    "3:  "
+set $ws4    "4:  "
+set $ws5    "5:  "
+set $ws6    "6:  "
+set $ws7    "7:  "
 set $ws8    "8:  "
 set $ws9    "9:  "
 set $ws10   "10:  "
@@ -208,11 +210,11 @@ bindsym XF86AudioNext              exec --no-startup-id playerctl next
 bindsym XF86AudioPlay              exec --no-startup-id playerctl play-pause
 bindsym $mod+Print                 exec scrot -e 'mv $f ~/Pictures/Screenshots/ && notify-send "Screenshot Taken"'
 
-assign [class="Emacs"] $ws1
-assign [class="Google-chrome"] $ws4
-assign [class="Spotify"] $ws5
-assign [class="Gimp"] $ws7
-for_window [class="Spotify"] move to workspace $ws5
+assign [class="Emacs"] $ws2
+assign [class="Google-chrome"] $ws1
+assign [class="Spotify"] $ws4
+assign [class="Gimp"] $ws6
+for_window [class="Spotify"] move to workspace $ws4
 
 # set specific windows to floating mode
 for_window [window_role="app"]                  floating enable

@@ -1,0 +1,196 @@
+;=====================================================
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/jaagr/polybar
+;
+;   The README contains alot of information
+;
+;=====================================================
+
+[colors]
+; Base colors from .Xresources
+bg          =  ${xrdb:background}
+bg-alt      =  ${xrdb:color8}
+fg          =  ${xrdb:foreground}
+fg-alt      =  ${xrdb:color15}
+red         =  ${xrdb:color1}
+red-alt     =  ${xrdb:color9}
+green       =  ${xrdb:color2}
+green-alt   =  ${xrdb:color10}
+yellow      =  ${xrdb:color3}
+yellow-alt  =  ${xrdb:color11}
+blue        =  ${xrdb:color4}
+blue-alt    =  ${xrdb:color12}
+magenta     =  ${xrdb:color5}
+magenta-alt =  ${xrdb:color13}
+cyan        =  ${xrdb:color6}
+cyan-alt    =  ${xrdb:color14}
+white       =  ${xrdb:color7}
+white-alt   =  ${xrdb:color15}
+
+[bar/left]
+;monitor = ${env:MONITOR:HDMI-1}
+width = 100%
+height = 35
+;offset-x = 1%
+;offset-y = 1%
+radius = 0.0
+fixed-center = false
+
+background = ${colors.bg}
+foreground = ${colors.fg}
+
+border-size = 0
+line-size = 2
+
+spacing = 0
+padding-left = 0
+padding-right = 0
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = SourceCodePro-Regular:size=10
+font-1 = FontAwesome5Free:size=10
+font-2 = FontAwesome5Brands:size=10
+font-3 = FontAwesome5FreeSolid:size=10
+
+modules-left = i3
+modules-center = xwindow
+modules-right = volume xbacklight wlan battery weather date
+
+tray-position = right
+tray-padding = 2
+
+[module/i3]
+type = internal/i3
+
+index-sort = true
+strip-wsnumbers = true
+
+label-focused = %name%
+label-focused-foreground = ${colors.blue}
+label-focused-background = ${colors.bg-alt}
+label-focused-underline = ${colors.blue}
+label-focused-padding = 1
+
+label-unfocused = %name%
+label-unfocused-foreground = ${colors.fg-alt}
+label-unfocused-background = ${colors.bg-alt}
+label-unfocused-padding = 1
+
+label-urgent = %name%
+label-urgent-foreground = ${colors.red-alt}
+label-urgent-background = ${colors.bg-alt}
+label-urgent-underline = ${colors.red-alt}
+label-urgent-padding = 1
+
+label-visible = %name%
+label-visible-foreground = ${colors.fg}
+label-visible-background = ${colors.bg-alt}
+label-visible-padding = 1
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:30:...%
+
+[module/xbacklight]
+type = internal/xbacklight
+
+format-prefix = ""
+format-prefix-foreground = ${colors.yellow-alt}
+format = <label>
+label = " %percentage%%"
+
+[module/wlan]
+type = internal/network
+interface = wlo1
+interval = 3.0
+
+format-connected = <ramp-signal> <label-connected>
+
+label-connected = "%essid%"
+label-connected-foreground = ${colors.fg}
+label-disconnected = %ifname% disconnected
+label-disconnected-foreground = ${colors.fg-alt}
+
+ramp-signal-0 = 
+ramp-signal-foreground = ${colors.cyan}
+
+[module/date]
+type = internal/date
+interval = 5
+
+date =
+date-alt = " %a %d %b %Y"
+
+time = " %r"
+time-alt = " %r"
+
+label = %date%%time%
+
+format-prefix = 
+format-prefix-foreground = ${colors.magenta}
+
+[module/volume]
+type = internal/volume
+
+label-volume = "%percentage%%"
+format-volume = <ramp-volume> <label-volume>
+label-volume-foreground = ${root.foreground}
+
+label-muted = " muted"
+format-muted-foreground = ${colors.blue}
+
+; Only applies if <ramp-volume> is used
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-volume-foreground=${colors.blue}
+
+[module/battery]
+type = internal/battery
+battery = BAT1
+adapter = ACAD
+full-at = 100
+
+label-discharging = "%percentage%% "
+;format-charging = <animation-charging> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+
+label-full = " full "
+format-full-prefix = 
+format-full-prefix-foreground = ${colors.blue}
+
+format-charging-prefix = 
+format-charging-prefix-foreground = ${colors.red}
+
+ramp-capacity-2 = 
+ramp-capacity-1 = 
+ramp-capacity-0 = 
+ramp-capacity-foreground = ${colors.green}
+
+label-charging = " Charging %percentage%% "
+label-charging-foreground = ${colors.fg}
+
+[module/weather]
+type = custom/script
+
+exec = ~/.config/polybar/scripts/weather "HMO"
+tail = false
+interval = 1800
+
+format = <label>
+format-foreground = ${colors.blue-alt}
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+; vim:ft=dosini
