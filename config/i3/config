@@ -21,7 +21,7 @@ focus_follows_mouse no
 
 # window border settings
 default_border          pixel 1
-default_floating_border none
+default_floating_border pixel 1
 
 # hiding borders adjacent to the screen edges
 hide_edge_borders none
@@ -30,7 +30,7 @@ hide_edge_borders none
 popup_during_fullscreen smart
 
 # Background image
-exec_always --no-startup-id feh --bg-scale ~/.config/wallpaper.jpg
+exec_always --no-startup-id feh --bg-scale ~/.config/wallpaper.png
 # Composite manager
 exec_always --no-startup-id compton
 # Remove mouse when unused
@@ -43,16 +43,20 @@ exec_always --no-startup-id dunst
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # Network Manager
 exec_always --no-startup-id nm-applet
+# Volume icon
+exec_always --no-startup-id volumeicon
+# Battery icon
+exec_always --no-startup-id cbatticon
+# Dropbox
+exec_always --no-startup-id dropbox
 # Bluetooth
 #exec_always --no-startup-id blueman-applet
 # Redshift
 #exec_always --no-startup-id redshift-gtk
-# Dropbox
-exec_always --no-startup-id dropbox
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:SF Pro Display 8
+font pango: Fira Sans SemiBold 10
 
 #bar {
 #  status_command polybar
@@ -128,16 +132,16 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1    "1:  "
-set $ws2    "2:  "
-set $ws3    "3:  "
-set $ws4    "4:  "
-set $ws5    "5:  "
-set $ws6    "6:  "
-set $ws7    "7:  "
-set $ws8    "8:  "
-set $ws9    "9:  "
-set $ws10   "10:  "
+set $ws1    "1"
+set $ws2    "2"
+set $ws3    "3"
+set $ws4    "4"
+set $ws5    "5"
+set $ws6    "6"
+set $ws7    "7"
+set $ws8    "8"
+set $ws9    "9"
+set $ws10   "10"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -179,16 +183,16 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym j resize shrink width 5 px or 5 ppt
+        bindsym k resize grow height 5 px or 5 ppt
+        bindsym l resize shrink height 5 px or 5 ppt
+        bindsym semicolon resize grow width 5 px or 5 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 5 px or 5 ppt
+        bindsym Down resize grow height 5 px or 5 ppt
+        bindsym Up resize shrink height 5 px or 5 ppt
+        bindsym Right resize grow width 5 px or 5 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -199,11 +203,11 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # class                 border  bground text    indicator child_border
-client.focused          #CAA9FA #BD93F9 #F8F8F2 #CAA9FA   #BD93F9
-client.focused_inactive #282A36 #5F676A #F8F8F2 #4D4D4D   #4D4D4D
-client.unfocused        #282A36 #282A36 #4D4D4D #282A36   #282A36
-client.urgent           #282A36 #FF5555 #F8F8F2 #FF5555   #FF5555
-client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
+client.focused          #4e474e #333333 #f2f2f2 #4e474e   #333333
+client.focused_inactive #333333 #5F676A #f2f2f2 #4e474e   #4e474e
+client.unfocused        #333333 #333333 #4e474e #333333   #333333
+client.urgent           #333333 #ff5c57 #f2f2f2 #ff5c57   #ff5c57
+client.placeholder      #333333 #333333 #f2f2f2 #333333   #333333
 
 bindsym XF86MonBrightnessDown      exec --no-startup-id xbacklight -dec 5
 bindsym XF86MonBrightnessUp        exec --no-startup-id xbacklight -inc 5
@@ -215,12 +219,12 @@ bindsym XF86AudioNext              exec --no-startup-id playerctl next
 bindsym XF86AudioPlay              exec --no-startup-id playerctl play-pause
 bindsym $mod+Print                 exec --no-startup-id gnome-screenshot --interactive
 
-assign [class="Emacs"] $ws2
-assign [class="Google-chrome"] $ws1
-assign [class="Spotify"] $ws4
-assign [class="Gimp"] $ws6
-assign [class="Io.elementary.files"] $ws5
-for_window [class="Spotify"] move to workspace $ws4
+#assign [class="Emacs"] $ws2
+#assign [class="Google-chrome"] $ws1
+#assign [class="Spotify"] $ws4
+#assign [class="Gimp"] $ws6
+#assign [class="Io.elementary.files"] $ws5
+#for_window [class="Spotify"] move to workspace $ws4
 
 # set specific windows to floating mode
 for_window [window_role="app"]                  floating enable
@@ -229,3 +233,4 @@ for_window [window_role="task_dialog"]          floating enable
 for_window [window_role="Organizer"]            floating enable
 for_window [window_role="GtkFileChooserDialog"] floating enable
 for_window [window_role="page-info"]            floating enable
+for_window [class="Gnome-system-monitor"]       floating enable

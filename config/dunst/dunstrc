@@ -64,7 +64,7 @@
     frame_width = 3
 
     # Defines color of the frame around the notification window.
-    frame_color = "#BD93F9"
+    frame_color = "#4e474e"
 
     # Define a color for the separator.
     # possible values are:
@@ -85,7 +85,7 @@
 
     ### Text ###
 
-    font = SF Pro Display 12
+    font = Fira Sans Book 10
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -243,19 +243,19 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#282A36"
-    foreground = "#BFBFBF"
+    background = "#333333"
+    foreground = "#f2f2f2"
     timeout = 10
 
 [urgency_normal]
-    background = "#4D4D4D"
-    foreground = "#F8F8F2"
+    background = "#333333"
+    foreground = "#f2f2f2"
     timeout = 10
 
 [urgency_critical]
-    background = "#FF5555"
-    foreground = "#F8F8F2"
-    frame_color = "#F4F99D"
+    background = "#333333"
+    foreground = "#f2f2f2"
+    frame_color = "#ff5c57"
     timeout = 0
 
 # Every section that isn't one of the above is interpreted as a rules to

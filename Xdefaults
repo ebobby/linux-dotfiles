@@ -1,30 +1,29 @@
-! Dracula Xresources palette
-*.foreground: #F8F8F2
-*.background: #282A36
-*.color0:     #000000
-*.color8:     #4D4D4D
-*.color1:     #FF5555
-*.color9:     #FF6E67
-*.color2:     #50FA7B
-*.color10:    #5AF78E
-*.color3:     #F1FA8C
-*.color11:    #F4F99D
-*.color4:     #BD93F9
-*.color12:    #CAA9FA
-*.color5:     #FF79C6
-*.color13:    #FF92D0
-*.color6:     #8BE9FD
-*.color14:    #9AEDFE
-*.color7:     #BFBFBF
-*.color15:    #E6E6E6
+! Pop! Os Xresources palette
+*.foreground:    #f2f2f2
+*.background:    #333333
+*.color0:        #383a46
+*.color8:        #4e4743
+*.color1:        #ff5c57
+*.color9:        #ff5c57
+*.color2:        #73c48f
+*.color10:       #5af78e
+*.color3:        #ffce51
+*.color11:       #f2c150
+*.color4:        #48b9c7
+*.color12:       #62b5bb
+*.color5:        #e91e63
+*.color13:       #9c27b0
+*.color6:        #3f51b5
+*.color14:       #9aedfe
+*.color7:        #f2f2f2
+*.color15:       #9e9e9e
 
 URxvt.depth:            32
-URxvt.font:             xft:inconsolata:size=11
+URxvt.font:             xft:fira mono:size=10
 URxvt.scrollBar:        false
 URxvt.fading:           30
-
-URrxvt.depth: 32
-URxvt.background: [92]#282A36
+URxvt.depth:            32
+URxvt.background:       [95]#333333
 
 URxvt.perl-ext-common: default,matcher,clipboard
 URxvt.url-launcher:    /usr/bin/xdg-open
@@ -35,7 +34,7 @@ URxvt.keysym.M-C-v:    perl:clipboard:paste_escaped
 
 Xft.autohint:           1
 Xft.lcdfilter:          lcddefault
-Xft.hintstyle:          hintsmedium
+Xft.hintstyle:          hintslight
 Xft.hinting:            1
 Xft.antialias:          1
 Xft.rgba:               rgb
