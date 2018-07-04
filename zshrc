@@ -20,7 +20,6 @@ HIST_STAMPS="yyyy-mm-dd"
 plugins=(
     archlinux
     colored-man-pages
-    common-aliases
     git
 )
 
