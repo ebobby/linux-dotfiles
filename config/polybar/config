@@ -59,7 +59,6 @@ modules-center = xwindow
 modules-right = date xbacklight
 
 tray-position = right
-tray-padding = 2
 
 [module/i3]
 type = internal/i3
