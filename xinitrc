@@ -40,4 +40,6 @@ if [[ "$SSH_AGENT_PID" == "" ]]; then
     eval "$(<~/.ssh-agent-thing)"
 fi
 
+export SSH_ASKPASS=lxqt-openssh-askpass
+
 exec i3

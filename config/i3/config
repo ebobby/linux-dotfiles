@@ -29,6 +29,8 @@ hide_edge_borders none
 # set popups during fullscreen mode
 popup_during_fullscreen smart
 
+# Authentication agent
+exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # Background image
 exec_always --no-startup-id feh --bg-scale ~/.config/wallpaper.png
 # Composite manager
@@ -55,6 +57,8 @@ exec_always --no-startup-id dropbox
 #exec_always --no-startup-id blueman-applet
 # Redshift
 #exec_always --no-startup-id redshift-gtk
+# Have SSH key added
+exec_always --no-startup-id ssh-add
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
