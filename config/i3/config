@@ -44,7 +44,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # Network Manager
 exec_always --no-startup-id nm-applet
 # Media mount/unmount
-exec_always --no-startup-id udiskie -At
+exec_always --no-startup-id /bin/sh -c "pgrep udiskie || udiskie -At"
 # Volume icon
 exec_always --no-startup-id /bin/sh -c "pgrep volumeicon || volumeicon"
 # Battery icon
