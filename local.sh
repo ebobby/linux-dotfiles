@@ -1,5 +1,6 @@
 alias local-devenv="cd ~/Projects/local-devenv ; vagrant up ; vagrant ssh"
 alias carezone-devenv="cd ~/Projects/carezone-devenv ; vagrant up ; vagrant ssh"
+alias nvidia-settings="optirun -b none nvidia-settings -c :8 "
 
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
     ssh-agent > ~/.ssh-agent-thing
@@ -11,5 +12,8 @@ fi
 
 source /usr/share/nvm/init-nvm.sh
 eval "$(rbenv init -)"
+
+unalias cp
+unalias mv
 
 neofetch
