@@ -24,6 +24,7 @@ URxvt.scrollBar:        false
 URxvt.fading:           30
 URxvt.depth:            32
 URxvt.background:       [95]#333333
+URxvt.internalBorder:   20
 
 URxvt.perl-ext-common: default,matcher,clipboard
 URxvt.url-launcher:    /usr/bin/xdg-open
