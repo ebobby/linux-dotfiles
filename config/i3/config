@@ -57,8 +57,6 @@ exec_always --no-startup-id dropbox
 #exec_always --no-startup-id blueman-applet
 # Redshift
 #exec_always --no-startup-id redshift-gtk
-# Have SSH key added
-exec_always --no-startup-id ssh-add
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -228,4 +226,4 @@ for_window [class="Gnome-system-monitor"]          floating enable
 for_window [class="Nautilus"]                      floating enable
 for_window [class="Gnome-disks"]                   floating enable
 for_window [class="Org.gnome.Weather.Application"] floating enable
-for_window [class="lxqt-openssh-askpass"]          floating enable
+for_window [class="Lightdm-gtk-greeter-settings"]  floating enable

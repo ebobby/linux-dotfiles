@@ -99,6 +99,15 @@ format-prefix-foreground = ${colors.yellow-alt}
 format = <label>
 label = " %percentage%%"
 
+[module/kbdbacklight]
+type = internal/backlight
+card = "../leds/system76::kbd_backlight"
+
+format-prefix = ""
+format-prefix-foreground = ${colors.green}
+format = <label>
+label = " %percentage%%"
+
 [module/wlan]
 type = internal/network
 interface = wlo1
@@ -118,11 +127,11 @@ ramp-signal-foreground = ${colors.cyan}
 type = internal/date
 interval = 5
 
-date =
-date-alt = " %a %d %b %Y"
+date = " %a %d %b %Y"
+#date-alt = " %a %d %b %Y"
 
 time = " %I:%M %p"
-time-alt = " %r"
+#time-alt = " %r"
 
 label = %date%%time%
 
