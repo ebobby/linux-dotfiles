@@ -32,13 +32,13 @@ popup_during_fullscreen smart
 # Authentication agent
 exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # Background image
-exec_always --no-startup-id feh --bg-scale ~/.config/wallpaper.png
+exec_always --no-startup-id feh --bg-scale ~/.config/wallpaper.jpg
 # Composite manager
 exec_always --no-startup-id compton
 # Remove mouse when unused
 exec_always --no-startup-id unclutter
 # Fast typing
-exec_always --no-startup-id xset r rate 200 30
+exec_always --no-startup-id xset r rate 200 50
 # Notifications
 exec_always --no-startup-id dunst
 # Polybar
