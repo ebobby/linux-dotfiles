@@ -35,7 +35,7 @@ height = 27
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 0.0
-fixed-center = false
+fixed-center = true
 
 background = ${colors.bg}
 foreground = ${colors.fg}
@@ -99,30 +99,6 @@ format-prefix-foreground = ${colors.yellow-alt}
 format = <label>
 label = " %percentage%%"
 
-[module/kbdbacklight]
-type = internal/backlight
-card = "../leds/system76::kbd_backlight"
-
-format-prefix = ""
-format-prefix-foreground = ${colors.green}
-format = <label>
-label = " %percentage%%"
-
-[module/wlan]
-type = internal/network
-interface = wlo1
-interval = 3.0
-
-format-connected = <ramp-signal> <label-connected>
-
-label-connected = "%essid%"
-label-connected-foreground = ${colors.fg}
-label-disconnected = %ifname% disconnected
-label-disconnected-foreground = ${colors.fg-alt}
-
-ramp-signal-0 = 
-ramp-signal-foreground = ${colors.cyan}
-
 [module/date]
 type = internal/date
 interval = 5
@@ -138,56 +114,6 @@ label = %date%%time%
 format-prefix = 
 format-prefix-foreground = ${colors.magenta}
 
-[module/volume]
-type = internal/volume
-
-label-volume = "%percentage%%"
-format-volume = <ramp-volume> <label-volume>
-label-volume-foreground = ${root.foreground}
-
-label-muted = " muted"
-format-muted-foreground = ${colors.cyan}
-
-; Only applies if <ramp-volume> is used
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
-ramp-volume-foreground=${colors.cyan}
-
-[module/battery]
-type = internal/battery
-battery = BAT1
-adapter = ACAD
-full-at = 100
-
-label-discharging = "%percentage%% "
-;format-charging = <animation-charging> <label-charging>
-format-discharging = <ramp-capacity> <label-discharging>
-
-label-full = " full "
-format-full-prefix = 
-format-full-prefix-foreground = ${colors.blue}
-
-format-charging-prefix = 
-format-charging-prefix-foreground = ${colors.red}
-
-ramp-capacity-2 = 
-ramp-capacity-1 = 
-ramp-capacity-0 = 
-ramp-capacity-foreground = ${colors.green}
-
-label-charging = " Charging %percentage%% "
-label-charging-foreground = ${colors.fg}
-
-[module/weather]
-type = custom/script
-
-exec = ~/.config/polybar/scripts/weather "HMO"
-tail = false
-interval = 1800
-
-format = <label>
-format-foreground = ${colors.white-alt}
 
 [settings]
 screenchange-reload = true
