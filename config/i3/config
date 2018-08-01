@@ -199,17 +199,17 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # class                 border  bground text    indicator child_border
-client.focused          #4e474e #333333 #f2f2f2 #4e474e #4e474e
-client.focused_inactive #333333 #5F676A #f2f2f2 #333333 #333333
-client.unfocused        #333333 #333333 #4e474e #333333 #333333
-client.urgent           #333333 #ff5c57 #f2f2f2 #ff5c57 #ff5c57
-client.placeholder      #333333 #333333 #f2f2f2 #333333 #333333
+client.focused          #4d4d4d #282a36 #f8f8f2 #4d4d4d #4d4d4d
+client.focused_inactive #282a36 #bfbfbf #f8f8f2 #282a36 #282a36
+client.unfocused        #282a36 #282a36 #4d4d4d #282a36 #282a36
+client.urgent           #282a36 #ff5555 #f8f8f2 #ff5555 #ff5555
+client.placeholder      #282a36 #282a36 #f8f8f2 #282a36 #282a36
 
-bindsym XF86MonBrightnessDown      exec --no-startup-id xbacklight -dec 5
-bindsym XF86MonBrightnessUp        exec --no-startup-id xbacklight -inc 5
-bindsym XF86AudioRaiseVolume       exec --no-startup-id amixer set Master 5%+ && pkill -RTMIN+10 i3blocks
-bindsym XF86AudioLowerVolume       exec --no-startup-id amixer set Master 5%- && pkill -RTMIN+10 i3blocks
-bindsym XF86AudioMute              exec --no-startup-id amixer set Master toggle && pkill -RTMIN+10 i3blocks
+bindsym XF86MonBrightnessDown      exec --no-startup-id light -U 5 ; cat /sys/class/backlight/intel_backlight/brightness
+bindsym XF86MonBrightnessUp        exec --no-startup-id light -A 5 ; cat /sys/class/backlight/intel_backlight/brightness
+bindsym XF86AudioRaiseVolume       exec --no-startup-id amixer set Master 5%+
+bindsym XF86AudioLowerVolume       exec --no-startup-id amixer set Master 5%-
+bindsym XF86AudioMute              exec --no-startup-id amixer set Master toggle
 bindsym XF86AudioPrev              exec --no-startup-id playerctl previous
 bindsym XF86AudioNext              exec --no-startup-id playerctl next
 bindsym XF86AudioPlay              exec --no-startup-id playerctl play-pause

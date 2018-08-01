@@ -56,7 +56,7 @@ font-3 = FontAwesome5FreeSolid:size=10
 
 modules-left = i3
 modules-center = xwindow
-modules-right = date xbacklight
+modules-right = weather date backlight
 
 tray-position = right
 
@@ -67,10 +67,10 @@ index-sort = true
 strip-wsnumbers = true
 
 label-focused = %name%
-label-focused-foreground = ${colors.yellow}
+label-focused-foreground = ${colors.blue}
 label-focused-background = ${colors.bg-alt}
 label-focused-padding = 2
-label-focused-underline = ${colors.yellow}
+label-focused-underline = ${colors.blue}
 
 label-unfocused = %name%
 label-unfocused-foreground = ${colors.fg-alt}
@@ -91,8 +91,9 @@ label-visible-padding = 2
 type = internal/xwindow
 label = %title%
 
-[module/xbacklight]
-type = internal/xbacklight
+[module/backlight]
+type = internal/backlight
+card = intel_backlight
 
 format-prefix = ""
 format-prefix-foreground = ${colors.yellow-alt}
@@ -114,6 +115,13 @@ label = %date%%time%
 format-prefix = 
 format-prefix-foreground = ${colors.magenta}
 
+[module/weather]
+type = custom/script
+exec = ~/.config/polybar/scripts/weather "HMO"
+tail = false
+interval = 1800
+format = <label>
+format-foreground = ${colors.cyan}
 
 [settings]
 screenchange-reload = true

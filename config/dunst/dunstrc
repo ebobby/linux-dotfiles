@@ -165,7 +165,7 @@
     max_icon_size = 64
 
     # Paths to default icons.
-    #icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+    icon_path = /usr/share/icons/Adwaita/64x64/status/:/usr/share/icons/Adwaita/64x64/devices/:~/.icons/
 
     ### History ###
 
@@ -243,19 +243,19 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#333333"
-    foreground = "#f2f2f2"
+    background = "#282a36"
+    foreground = "#f8f8f2"
     timeout = 10
 
 [urgency_normal]
-    background = "#333333"
-    foreground = "#f2f2f2"
+    background = "#282a36"
+    foreground = "#f8f8f2"
     timeout = 10
 
 [urgency_critical]
-    background = "#333333"
-    foreground = "#f2f2f2"
-    frame_color = "#ff5c57"
+    background = "#282a36"
+    foreground = "#f8f8f2"
+    frame_color = "#ff6e67"
     timeout = 0
 
 # Every section that isn't one of the above is interpreted as a rules to
