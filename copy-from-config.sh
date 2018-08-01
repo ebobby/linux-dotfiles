@@ -12,7 +12,7 @@ cp ~/.zshrc ./zshrc
 cp ~/.config/compton.conf ./config/compton.conf
 cp ~/.config/dunst/dunstrc ./config/dunst/dunstrc
 cp ~/.config/htop/htoprc ./config/htop/htoprc
-cp ~/.config/i3/config ./config/i3/config
+cp -R ~/.config/i3/* ./config/i3/
 cp ~/.config/nano/nanorc ./config/nano/nanorc
 cp ~/.config/neofetch/config.conf ./config/neofetch/config.conf
 cp -R ~/.config/polybar/* ./config/polybar/

@@ -51,6 +51,8 @@ exec_always --no-startup-id /bin/sh -c "pgrep udiskie || udiskie -At"
 exec_always --no-startup-id /bin/sh -c "pgrep volumeicon || volumeicon"
 # Battery icon
 exec_always --no-startup-id /bin/sh -c "pgrep cbatticon || cbatticon"
+# System76 control
+exec_always --no-startup-id ~/.config/i3/scripts/system76-control.py
 # Dropbox
 exec_always --no-startup-id dropbox
 # Bluetooth
