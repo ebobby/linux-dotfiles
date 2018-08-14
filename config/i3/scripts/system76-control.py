@@ -23,7 +23,6 @@ def select_power_profile(profile):
 def select_graphics_card(card):
   "Select a graphics card."
   icon = icon_path("{0}.png".format(card))
-  notify("Switching graphics card to {0} (wait a few seconds) ...".format(card.title()), icon)
   subprocess.call(["system76-power", "graphics", card])
   notify("Switched graphics card to {0}.".format(card.title()), icon)
 
