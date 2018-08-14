@@ -29,18 +29,20 @@ hide_edge_borders smart
 # set popups during fullscreen mode
 popup_during_fullscreen smart
 
-# Authentication agent
-exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # Background image
 exec_always --no-startup-id feh --bg-scale ~/.config/wallpaper.jpg
-# Composite manager
-exec_always --no-startup-id compton
-# Remove mouse when unused
-exec_always --no-startup-id unclutter
+# Authentication agent
+exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+# Automatic screen lock
+exec_always --no-startup-id xss-lock -- i3lock -n -i ~/Dropbox/Pictures/Wallpapers/pexels-photo-257360.png
 # Fast typing
 exec_always --no-startup-id xset r rate 200 50
 # Notifications
 exec_always --no-startup-id dunst
+# Composite manager
+exec_always --no-startup-id compton
+# Remove mouse when unused
+exec_always --no-startup-id unclutter
 # Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # Network Manager
@@ -53,12 +55,10 @@ exec_always --no-startup-id /bin/sh -c "pgrep volumeicon || volumeicon"
 exec_always --no-startup-id /bin/sh -c "pgrep cbatticon || cbatticon"
 # System76 control
 exec_always --no-startup-id ~/.config/i3/scripts/system76-control.py
+# Redshift
+exec_always --no-startup-id /bin/sh -c "pgrep redshift-gtk || (/usr/lib/geoclue-2.0/demos/agent | redshift-gtk)"
 # Dropbox
 exec_always --no-startup-id dropbox
-# Bluetooth
-#exec_always --no-startup-id blueman-applet
-# Redshift
-#exec_always --no-startup-id redshift-gtk
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -207,15 +207,16 @@ client.unfocused        #282a36 #282a36 #4d4d4d #282a36 #282a36
 client.urgent           #282a36 #ff5555 #f8f8f2 #ff5555 #ff5555
 client.placeholder      #282a36 #282a36 #f8f8f2 #282a36 #282a36
 
-bindsym XF86MonBrightnessDown      exec --no-startup-id light -U 5 ; cat /sys/class/backlight/intel_backlight/brightness
-bindsym XF86MonBrightnessUp        exec --no-startup-id light -A 5 ; cat /sys/class/backlight/intel_backlight/brightness
+bindsym XF86MonBrightnessDown      exec --no-startup-id "light -U 5 ; cat /sys/class/backlight/intel_backlight/brightness"
+bindsym XF86MonBrightnessUp        exec --no-startup-id "light -A 5 ; cat /sys/class/backlight/intel_backlight/brightnes"
 bindsym XF86AudioRaiseVolume       exec --no-startup-id amixer set Master 5%+
 bindsym XF86AudioLowerVolume       exec --no-startup-id amixer set Master 5%-
 bindsym XF86AudioMute              exec --no-startup-id amixer set Master toggle
 bindsym XF86AudioPrev              exec --no-startup-id playerctl previous
 bindsym XF86AudioNext              exec --no-startup-id playerctl next
 bindsym XF86AudioPlay              exec --no-startup-id playerctl play-pause
-bindsym $mod+Print                 exec --no-startup-id gnome-screenshot --interactive
+bindsym Print                      exec --no-startup-id gnome-screenshot --interactive
+bindsym Pause                      exec --no-startup-id i3lock -n -i ~/Dropbox/Pictures/Wallpapers/pexels-photo-257360.png
 
 # Assign apps to workspaces, makes for faster setup
 assign [class="Firefox Developer Edition"] $ws1
@@ -241,3 +242,7 @@ for_window [class="Gnome-disks"]                   floating enable
 for_window [class="Org.gnome.Weather.Application"] floating enable
 for_window [class="Lightdm-gtk-greeter-settings"]  floating enable
 for_window [class="Seahorse"]                      floating enable
+for_window [class="Lxappearance"]                  floating enable
+for_window [class="Pavucontrol"]                   floating enable
+for_window [class="Gnome-calculator"]              floating enable
+for_window [class="qpaeq"]                         floating enable
