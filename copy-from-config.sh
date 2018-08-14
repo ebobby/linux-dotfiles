@@ -2,7 +2,6 @@
 
 cp ~/.Xdefaults ./Xdefaults
 cp ~/.asoundrc ./asoundrc
-cp ~/.drirc ./drirc
 cp ~/.gitconfig ./gitconfig
 cp ~/.local.sh ./local.sh
 cp ~/.xinitrc ./xinitrc
