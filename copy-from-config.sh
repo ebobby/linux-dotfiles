@@ -16,6 +16,12 @@ cp ~/.config/nano/nanorc ./config/nano/nanorc
 cp ~/.config/neofetch/config.conf ./config/neofetch/config.conf
 cp -R ~/.config/polybar/* ./config/polybar/
 cp ~/.config/pulse/daemon.conf ./config/pulse/daemon.conf
+cp ~/.config/pulse/default.pa ./config/pulse/default.pa
+cp ~/.config/pulse/equalizer-presets.tdb ./config/pulse/equalizer-presets.tdb
+cp ~/.config/pulse/equalizer-state.tdb ./config/pulse/equalizer-state.tdb
+cp ~/.config/pulse/daemon.conf ./config/pulse/daemon.conf
 cp ~/.config/rofi/config ./config/rofi/config
 cp ~/.config/volumeicon/volumeicon ./config/volumeicon/volumeicon
 cp ~/.config/zoomus.conf ./config/zoomus.conf
+
+cp ~/.volk/volk_config ./volk/volk_config
