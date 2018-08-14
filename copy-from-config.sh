@@ -25,3 +25,7 @@ cp ~/.config/volumeicon/volumeicon ./config/volumeicon/volumeicon
 cp ~/.config/zoomus.conf ./config/zoomus.conf
 
 cp ~/.volk/volk_config ./volk/volk_config
+
+cp ~/.config/pavucontrol.ini ./config/pavucontrol.ini
+cp ~/.config/gqrx/bookmarks.csv ./config/gqrx/bookmarks.csv
+cp ~/.config/gqrx/default.conf  ./config/gqrx/default.conf

@@ -1,0 +1,7 @@
+# Tag name          ;  color
+Untagged            ; #c0c0c0
+
+# Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
+   118700000; HMO TWR                  ; AM                  ;      10000; Untagged
+   121400000; APP NORTE                ; AM                  ;      10000; Untagged
+   126300000; MZT CTR                  ; AM                  ;      10000; Untagged
