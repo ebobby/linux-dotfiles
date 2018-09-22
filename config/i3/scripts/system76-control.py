@@ -4,6 +4,36 @@ import os
 import gtk
 import subprocess
 
+def check_pid(pid):
+  """ Check For the existence of a unix pid. """
+  try:
+    os.kill(pid, 0)
+  except OSError:
+    return False
+  else:
+    return True
+
+def read_pid_file():
+  try:
+    file = open(os.path.expanduser("~/.system76-control.pid"), "r")
+    pid = int(file.read())
+    file.close()
+    return pid
+  except:
+    return False
+
+def write_pid_file():
+  file = open(os.path.expanduser("~/.system76-control.pid"), "w")
+  file.write(str(os.getpid()))
+  file.close()
+
+def check_if_currently_running():
+  pid = read_pid_file();
+  if pid != False:
+    return check_pid(pid)
+  else:
+    return False
+
 def icon_path(icon_file):
   dir_path = os.path.dirname(os.path.realpath(__file__))
   return os.path.join(dir_path, icon_file)
@@ -23,6 +53,7 @@ def select_power_profile(profile):
 def select_graphics_card(card):
   "Select a graphics card."
   icon = icon_path("{0}.png".format(card))
+  notify("Switching graphics card to {0}... (takes a couple of minutes)".format(card.title()), icon)
   subprocess.call(["system76-power", "graphics", card])
   notify("Switched graphics card to {0}.".format(card.title()), icon)
 
@@ -97,6 +128,10 @@ def on_right_click(data, event_button, event_time):
   make_menu(event_button, event_time)
 
 if __name__ == "__main__":
-  icon = gtk.status_icon_new_from_file(icon_path("system76.png"))
-  icon.connect("popup-menu", on_right_click)
-  gtk.main()
+  if check_if_currently_running():
+    print("Currently running... exiting...")
+  else:
+    write_pid_file()
+    icon = gtk.status_icon_new_from_file(icon_path("system76.png"))
+    icon.connect("popup-menu", on_right_click)
+    gtk.main()
