@@ -49,7 +49,7 @@ padding-right = 1
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = FiraSans:size=10:style=SemiBold
+font-0 = FiraSans:size=10:style=semibold
 font-1 = FontAwesome5Free:size=10
 font-2 = FontAwesome5Brands:size=10
 font-3 = FontAwesome5FreeSolid:size=10
@@ -68,35 +68,36 @@ strip-wsnumbers = true
 
 label-focused = %name%
 label-focused-foreground = ${colors.blue}
-label-focused-background = ${colors.bg-alt}
+label-focused-background = ${colors.bg}
 label-focused-padding = 2
 label-focused-underline = ${colors.blue}
 
 label-unfocused = %name%
 label-unfocused-foreground = ${colors.fg-alt}
-label-unfocused-background = ${colors.bg-alt}
+label-unfocused-background = ${colors.bg}
 label-unfocused-padding = 2
 
 label-urgent = %name%
 label-urgent-foreground = ${colors.red-alt}
-label-urgent-background = ${colors.bg-alt}
+label-urgent-background = ${colors.bg}
 label-urgent-padding = 2
 
 label-visible = %name%
 label-visible-foreground = ${colors.fg}
-label-visible-background = ${colors.bg-alt}
+Label-visible-background = ${colors.bg}
 label-visible-padding = 2
 
 [module/xwindow]
 type = internal/xwindow
 label = %title%
+label-maxlen = 100
 
 [module/backlight]
 type = internal/backlight
 card = intel_backlight
 
 format-prefix = ""
-format-prefix-foreground = ${colors.yellow-alt}
+format-prefix-foreground = ${colors.yellow}
 format = <label>
 label = " %percentage%%"
 

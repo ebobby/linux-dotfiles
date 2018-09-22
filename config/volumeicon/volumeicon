@@ -7,13 +7,13 @@ notification_type=1
 
 [StatusIcon]
 stepsize=5
-onclick=urxvt -e "alsamixer"
-theme=Default
+onclick=pavucontrol
+theme=Blue Bar
 use_panel_specific_icons=false
 lmb_slider=true
-mmb_mute=true
+mmb_mute=false
 use_horizontal_slider=false
-show_sound_level=false
+show_sound_level=true
 use_transparent_background=false
 
 [Hotkeys]

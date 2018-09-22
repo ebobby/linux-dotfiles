@@ -30,17 +30,17 @@ hide_edge_borders smart
 popup_during_fullscreen smart
 
 # Background image
-exec_always --no-startup-id feh --bg-scale ~/.config/wallpaper.jpg
+exec_always --no-startup-id feh --bg-scale ~/.wallpapers/pi.jpg
 # Authentication agent
 exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # Automatic screen lock
-exec_always --no-startup-id xss-lock -- i3lock -n -i ~/Dropbox/Pictures/Wallpapers/pexels-photo-257360.png
+#exec_always --no-startup-id xss-lock -- i3lock -n -i ~/Dropbox/Pictures/Wallpapers/Carmine\ De\ Fazio.png
 # Fast typing
 exec_always --no-startup-id xset r rate 200 50
 # Notifications
 exec_always --no-startup-id dunst
 # Composite manager
-exec_always --no-startup-id compton
+#exec_always --no-startup-id compton
 # Remove mouse when unused
 exec_always --no-startup-id unclutter
 # Polybar
@@ -84,23 +84,11 @@ bindsym $mod+k focus down
 bindsym $mod+l focus up
 bindsym $mod+semicolon focus right
 
-# alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
-
 # move focused window
 bindsym $mod+Shift+j move left
 bindsym $mod+Shift+k move down
 bindsym $mod+Shift+l move up
 bindsym $mod+Shift+semicolon move right
-
-# alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
 bindsym $mod+h split h
@@ -128,18 +116,22 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+# scratchpad
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1    "1: "
 set $ws2    "2: "
 set $ws3    "3: "
 set $ws4    "4: "
-set $ws5    "5: "
+set $ws5    "5: "
 set $ws6    "6: "
-set $ws7    "7: "
+set $ws7    "7: "
 set $ws8    "8: "
-set $ws9    "9: "
-set $ws10   "10: "
+set $ws9    "9: "
+set $ws10   "10: "
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -197,14 +189,13 @@ mode "resize" {
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
 }
-
 bindsym $mod+r mode "resize"
 
 # class                 border  bground text    indicator child_border
-client.focused          #4d4d4d #282a36 #f8f8f2 #4d4d4d #4d4d4d
+client.focused          #bd93f9 #282a36 #f8f8f2 #bd93f9 #bd93f9
 client.focused_inactive #282a36 #bfbfbf #f8f8f2 #282a36 #282a36
-client.unfocused        #282a36 #282a36 #4d4d4d #282a36 #282a36
-client.urgent           #282a36 #ff5555 #f8f8f2 #ff5555 #ff5555
+client.unfocused        #4d4d4d #282a36 #4d4d4d #4d4d4d #4d4d4d
+client.urgent           #282a36 #ff6e67 #f8f8f2 #ff6e67 #ff6e67
 client.placeholder      #282a36 #282a36 #f8f8f2 #282a36 #282a36
 
 bindsym XF86MonBrightnessDown      exec --no-startup-id "light -U 5 ; cat /sys/class/backlight/intel_backlight/brightness"
@@ -216,19 +207,17 @@ bindsym XF86AudioPrev              exec --no-startup-id playerctl previous
 bindsym XF86AudioNext              exec --no-startup-id playerctl next
 bindsym XF86AudioPlay              exec --no-startup-id playerctl play-pause
 bindsym Print                      exec --no-startup-id gnome-screenshot --interactive
-bindsym Pause                      exec --no-startup-id i3lock -n -i ~/Dropbox/Pictures/Wallpapers/pexels-photo-257360.png
+bindsym Pause                      exec --no-startup-id i3lock -n -i ~/Dropbox/Pictures/Wallpapers/Carmine\ De\ Fazio.png
 
 # Assign apps to workspaces, makes for faster setup
 assign [class="Firefox Developer Edition"] $ws1
 assign [class="Emacs"] $ws2
 assign [class="URxvt"] $ws3
-assign [class="Nautilus"] $ws4
 assign [class="Gthumb"] $ws5
 assign [class="zoom"] $ws7
-for_window [class="Spotify"] move to workspace $ws8
 assign [class="Evolution"] $ws9
 assign [class="Slack"] $ws10
-
+for_window [class="Spotify"] move to workspace $ws8
 
 # set specific windows to floating mode
 for_window [window_role="app"]                     floating enable
@@ -246,3 +235,5 @@ for_window [class="Lxappearance"]                  floating enable
 for_window [class="Pavucontrol"]                   floating enable
 for_window [class="Gnome-calculator"]              floating enable
 for_window [class="qpaeq"]                         floating enable
+for_window [class="Nautilus"]                      floating enable
+for_window [class="Transmission"]                  floating enable

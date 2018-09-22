@@ -16,15 +16,16 @@
 *.color6:     #8BE9FD
 *.color14:    #9AEDFE
 *.color7:     #BFBFBF
-*.color15: #E6E6E6
+*.color15:    #E6E6E6
 
-URxvt.depth:            32
-URxvt.font:             xft:fira mono:size=10
+URxvt.font:             xft:sourcecodepro:size=11:style=light
 URxvt.scrollBar:        false
-URxvt.fading:           30
 URxvt.depth:            32
-URxvt.background:       [95]#282A36
-URxvt.internalBorder:   20
+URxvt.internalBorder:   24
+URxvt*cursorUnderline:  true
+URxvt*fading:           0
+URxvt*shading:          0
+URxvt*saveLines:        20000
 
 URxvt.perl-ext-common: default,matcher,clipboard
 URxvt.url-launcher:    /usr/bin/xdg-open
