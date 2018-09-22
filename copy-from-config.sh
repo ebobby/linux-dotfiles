@@ -23,9 +23,4 @@ cp ~/.config/pulse/daemon.conf ./config/pulse/daemon.conf
 cp ~/.config/rofi/config ./config/rofi/config
 cp ~/.config/volumeicon/volumeicon ./config/volumeicon/volumeicon
 cp ~/.config/zoomus.conf ./config/zoomus.conf
-
-cp ~/.volk/volk_config ./volk/volk_config
-
 cp ~/.config/pavucontrol.ini ./config/pavucontrol.ini
-cp ~/.config/gqrx/bookmarks.csv ./config/gqrx/bookmarks.csv
-cp ~/.config/gqrx/default.conf  ./config/gqrx/default.conf
