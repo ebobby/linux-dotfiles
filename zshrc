@@ -19,10 +19,21 @@ HIST_STAMPS="yyyy-mm-dd"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     archlinux
+    cargo
     colored-man-pages
     common-aliases
     git
+    fzf
+    lein
+    nvm
+    npm
+    node
+    ruby
+    rbenv
+    rust
+    vagrant
+    systemd
 )
 
 source $ZSH/oh-my-zsh.sh
-source ~/.local.sh
+source ~/.environment.sh

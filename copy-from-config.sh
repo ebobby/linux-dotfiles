@@ -3,7 +3,7 @@
 cp ~/.Xdefaults ./Xdefaults
 cp ~/.asoundrc ./asoundrc
 cp ~/.gitconfig ./gitconfig
-cp ~/.local.sh ./local.sh
+cp ~/.environment.sh ./environment.sh
 cp ~/.xinitrc ./xinitrc
 cp ~/.xprofile ./xprofile
 cp ~/.zshrc ./zshrc
