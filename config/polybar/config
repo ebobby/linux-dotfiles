@@ -49,7 +49,7 @@ padding-right = 1
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = FiraSans:size=10:style=semibold
+font-0 = FiraSansCondensed:size=10:style=SemiBold
 font-1 = FontAwesome5Free:size=10
 font-2 = FontAwesome5Brands:size=10
 font-3 = FontAwesome5FreeSolid:size=10
@@ -67,13 +67,13 @@ index-sort = true
 strip-wsnumbers = true
 
 label-focused = %name%
-label-focused-foreground = ${colors.blue}
+label-focused-foreground = ${colors.blue-alt}
 label-focused-background = ${colors.bg}
 label-focused-padding = 2
-label-focused-underline = ${colors.blue}
+label-focused-underline = ${colors.blue-alt}
 
 label-unfocused = %name%
-label-unfocused-foreground = ${colors.fg-alt}
+label-unfocused-foreground = ${colors.fg}
 label-unfocused-background = ${colors.bg}
 label-unfocused-padding = 2
 
@@ -97,7 +97,7 @@ type = internal/backlight
 card = intel_backlight
 
 format-prefix = ""
-format-prefix-foreground = ${colors.yellow}
+format-prefix-foreground = ${colors.yellow-alt}
 format = <label>
 label = " %percentage%%"
 
@@ -122,7 +122,7 @@ exec = ~/.config/polybar/scripts/weather "HMO"
 tail = false
 interval = 1800
 format = <label>
-format-foreground = ${colors.cyan}
+format-foreground = ${colors.green-alt}
 
 [settings]
 screenchange-reload = true

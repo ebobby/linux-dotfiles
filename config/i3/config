@@ -29,16 +29,19 @@ hide_edge_borders smart
 # set popups during fullscreen mode
 popup_during_fullscreen smart
 
+# go back to previpus workspace using the same binding
+workspace_auto_back_and_forth yes
+
 # Background image
-exec_always --no-startup-id feh --bg-scale ~/.wallpapers/pi.jpg
+exec_always --no-startup-id feh --bg-scale ~/.wallpapers/stars_sky_space_car_113629_3840x2160.jpg
 # Authentication agent
 exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # Automatic screen lock
-#exec_always --no-startup-id xss-lock -- i3lock -n -i ~/Dropbox/Pictures/Wallpapers/Carmine\ De\ Fazio.png
+exec_always --no-startup-id xscreensaver -no-splash
 # Fast typing
-exec_always --no-startup-id xset r rate 200 50
+exec_always --no-startup-id xset r rate 250 50
 # Notifications
-exec_always --no-startup-id dunst
+#exec_always --no-startup-id /usr/lib/notify-osd/notify-osd
 # Composite manager
 #exec_always --no-startup-id compton
 # Remove mouse when unused
@@ -54,7 +57,7 @@ exec_always --no-startup-id /bin/sh -c "pgrep volumeicon || volumeicon"
 # Battery icon
 exec_always --no-startup-id /bin/sh -c "pgrep cbatticon || cbatticon"
 # System76 control
-exec_always --no-startup-id ~/.config/i3/scripts/system76-control.py
+#exec_always --no-startup-id ~/.config/i3/scripts/system76-control.py
 # Redshift
 exec_always --no-startup-id /bin/sh -c "pgrep redshift-gtk || (/usr/lib/geoclue-2.0/demos/agent | redshift-gtk)"
 # Dropbox
@@ -62,7 +65,7 @@ exec_always --no-startup-id dropbox
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango: Fira Sans SemiBold 10
+font pango: Fira Sans Condensed SemiBold 10
 
 set $term --no-startup-id urxvt
 
@@ -114,7 +117,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+p focus child
 
 # scratchpad
 bindsym $mod+Shift+minus move scratchpad
@@ -122,7 +125,7 @@ bindsym $mod+minus scratchpad show
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1    "1: "
+set $ws1    "1: "
 set $ws2    "2: "
 set $ws3    "3: "
 set $ws4    "4: "
@@ -192,11 +195,11 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # class                 border  bground text    indicator child_border
-client.focused          #bd93f9 #282a36 #f8f8f2 #bd93f9 #bd93f9
-client.focused_inactive #282a36 #bfbfbf #f8f8f2 #282a36 #282a36
-client.unfocused        #4d4d4d #282a36 #4d4d4d #4d4d4d #4d4d4d
-client.urgent           #282a36 #ff6e67 #f8f8f2 #ff6e67 #ff6e67
-client.placeholder      #282a36 #282a36 #f8f8f2 #282a36 #282a36
+client.focused          #7070f0 #1b1d1e #cccccc #7070f0 #7070f0
+client.focused_inactive #1b1d1e #cccccc #cccccc #1b1d1e #1b1d1e
+client.unfocused        #1b1d1e #1b1d1e #1b1d1e #1b1d1e #1b1d1e
+client.urgent           #1b1d1e #ff0044 #cccccc #ff0044 #ff0044
+client.placeholder      #1b1d1e #1b1d1e #cccccc #1b1d1e #1b1d1e
 
 bindsym XF86MonBrightnessDown      exec --no-startup-id "light -U 5 ; cat /sys/class/backlight/intel_backlight/brightness"
 bindsym XF86MonBrightnessUp        exec --no-startup-id "light -A 5 ; cat /sys/class/backlight/intel_backlight/brightnes"
@@ -207,10 +210,10 @@ bindsym XF86AudioPrev              exec --no-startup-id playerctl previous
 bindsym XF86AudioNext              exec --no-startup-id playerctl next
 bindsym XF86AudioPlay              exec --no-startup-id playerctl play-pause
 bindsym Print                      exec --no-startup-id gnome-screenshot --interactive
-bindsym Pause                      exec --no-startup-id i3lock -n -i ~/Dropbox/Pictures/Wallpapers/Carmine\ De\ Fazio.png
+bindsym Pause                      exec --no-startup-id xscreensaver-command -lock
 
 # Assign apps to workspaces, makes for faster setup
-assign [class="Firefox Developer Edition"] $ws1
+assign [class="Google-chrome"] $ws1
 assign [class="Emacs"] $ws2
 assign [class="URxvt"] $ws3
 assign [class="Gthumb"] $ws5
