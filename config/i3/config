@@ -33,7 +33,7 @@ popup_during_fullscreen smart
 workspace_auto_back_and_forth yes
 
 # Background image
-exec_always --no-startup-id feh --bg-scale ~/.wallpapers/stars_sky_space_car_113629_3840x2160.jpg
+exec_always --no-startup-id feh --bg-scale /usr/share/backgrounds/System76-Unleash_Your_Robot-by_Kate_Hazen_of_System76.png
 # Authentication agent
 exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # Automatic screen lock
@@ -41,9 +41,7 @@ exec_always --no-startup-id xscreensaver -no-splash
 # Fast typing
 exec_always --no-startup-id xset r rate 250 50
 # Notifications
-#exec_always --no-startup-id /usr/lib/notify-osd/notify-osd
-# Composite manager
-#exec_always --no-startup-id compton
+exec_always --no-startup-id dunst
 # Remove mouse when unused
 exec_always --no-startup-id unclutter
 # Polybar
@@ -56,8 +54,6 @@ exec_always --no-startup-id /bin/sh -c "pgrep udiskie || udiskie -At"
 exec_always --no-startup-id /bin/sh -c "pgrep volumeicon || volumeicon"
 # Battery icon
 exec_always --no-startup-id /bin/sh -c "pgrep cbatticon || cbatticon"
-# System76 control
-#exec_always --no-startup-id ~/.config/i3/scripts/system76-control.py
 # Redshift
 exec_always --no-startup-id /bin/sh -c "pgrep redshift-gtk || (/usr/lib/geoclue-2.0/demos/agent | redshift-gtk)"
 # Dropbox
@@ -65,7 +61,7 @@ exec_always --no-startup-id dropbox
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango: Fira Sans Condensed SemiBold 10
+font pango: Fira Sans Condensed Bold 11
 
 set $term --no-startup-id urxvt
 
@@ -195,14 +191,14 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # class                 border  bground text    indicator child_border
-client.focused          #7070f0 #1b1d1e #cccccc #7070f0 #7070f0
-client.focused_inactive #1b1d1e #cccccc #cccccc #1b1d1e #1b1d1e
-client.unfocused        #1b1d1e #1b1d1e #1b1d1e #1b1d1e #1b1d1e
-client.urgent           #1b1d1e #ff0044 #cccccc #ff0044 #ff0044
-client.placeholder      #1b1d1e #1b1d1e #cccccc #1b1d1e #1b1d1e
+client.focused          #ebdbb2 #282828 #ebdbb2 #ebdbb2 #ebdbb2
+client.focused_inactive #282828 #ebdbb2 #ebdbb2 #282828 #282828
+client.unfocused        #282828 #282828 #282828 #282828 #282828
+client.urgent           #282828 #cc241d #ebdbb2 #cc241d #cc241d
+client.placeholder      #282828 #282828 #ebdbb2 #282828 #282828
 
-bindsym XF86MonBrightnessDown      exec --no-startup-id "light -U 5 ; cat /sys/class/backlight/intel_backlight/brightness"
-bindsym XF86MonBrightnessUp        exec --no-startup-id "light -A 5 ; cat /sys/class/backlight/intel_backlight/brightnes"
+bindsym XF86MonBrightnessDown      exec --no-startup-id xbacklight -dec 5
+bindsym XF86MonBrightnessUp        exec --no-startup-id xbacklight -inc 5
 bindsym XF86AudioRaiseVolume       exec --no-startup-id amixer set Master 5%+
 bindsym XF86AudioLowerVolume       exec --no-startup-id amixer set Master 5%-
 bindsym XF86AudioMute              exec --no-startup-id amixer set Master toggle
@@ -238,5 +234,4 @@ for_window [class="Lxappearance"]                  floating enable
 for_window [class="Pavucontrol"]                   floating enable
 for_window [class="Gnome-calculator"]              floating enable
 for_window [class="qpaeq"]                         floating enable
-for_window [class="Nautilus"]                      floating enable
 for_window [class="Transmission"]                  floating enable

@@ -13,17 +13,17 @@ rofi.width:              50
 rofi.column:             1
 rofi.location:           0
 rofi.lines:              10
-rofi.padding:            52
+rofi.padding:            26
 rofi.sidebar-mode:       true
 rofi.fullscreen:         false
 rofi.fake-transparency:  false
 rofi.color-enabled:      true
 
 !!                  bg       border   separator
-rofi.color-window:  #1b1d1e, #808080, #7070f0
+rofi.color-window:  #282828, #ebdbb2, #ebdbb2
 
 !!                  bg       fg       bg-alt   hl-bg    hl-fg
-rofi.color-normal:  #1b1d1e, #cccccc, #1b1d1e, #7070f0, #cccccc
-rofi.color-active:  #1b1d1e, #1b1d1e, #1b1d1e, #266c98, #1b1d1e
-rofi.color-urgent:  #FF0044, #1b1d1e, #FF0044, #FF0044, #1b1d1e
-rofi.color-urgent:  #1b1d1e, #1b1d1e, #1b1d1e, #1b1d1e, #1b1d1e
+rofi.color-normal:  #282828, #ebdbb2, #282828, #fb4934, #ebdbb2
+rofi.color-active:  #282828, #282828, #282828, #458588, #282828
+rofi.color-urgent:  #cc241d, #282828, #cc241d, #cc241d, #282828
+rofi.color-urgent:  #282828, #282828, #282828, #282828, #282828
