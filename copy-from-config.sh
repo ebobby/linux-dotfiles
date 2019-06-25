@@ -8,7 +8,7 @@ cp ~/.gitconfig ./gitconfig
 cp ~/.tmux.conf ./tmux.conf
 cp ~/.xinitrc ./xinitrc
 cp ~/.xprofile ./xprofile
-cp ~/.xscreensaver ./xcreensaver
+cp ~/.xscreensaver ./xscreensaver
 cp ~/.zshrc ./zshrc
 
 cp -R ~/.config/PulseEffects ./config/PulseEffects/
