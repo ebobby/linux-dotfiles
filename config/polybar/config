@@ -47,14 +47,14 @@ padding-right = 1
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = FiraSansCondensed:pixelsize=11:style=ExtraBold
-font-1 = FontAwesome5Free:size=10
-font-2 = FontAwesome5Brands:size=10
-font-3 = FontAwesome5FreeSolid:size=10
+font-0 = FiraSansCondensed:pixelsize=12:style=ExtraBold
+font-1 = FontAwesome5Free:pixelsize=12
+font-2 = FontAwesome5Brands:pixelsize=12
+font-3 = FontAwesome5FreeSolid:pixelsize=12
 
 modules-left = i3
 modules-center = xwindow
-modules-right = weather date backlight
+modules-right = date backlight
 
 tray-position = right
 
@@ -65,10 +65,10 @@ index-sort = true
 strip-wsnumbers = true
 
 label-focused = %name%
-label-focused-foreground = ${colors.fg-alt}
+label-focused-foreground = ${colors.yellow}
 label-focused-background = ${colors.bg}
 label-focused-padding = 2
-label-focused-underline = ${colors.fg-alt}
+label-focused-underline = ${colors.yellow}
 
 label-unfocused = %name%
 label-unfocused-foreground = ${colors.bg-alt}

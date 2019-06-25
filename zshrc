@@ -9,7 +9,7 @@ CASE_SENSITIVE="true"
 
 export UPDATE_ZSH_DAYS=14
 
-# ENABLE_CORRECTION="true"
+#ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="yyyy-mm-dd"
 
@@ -24,15 +24,15 @@ plugins=(
     common-aliases
     git
     fzf
-    lein
     nvm
     npm
     node
     ruby
     rbenv
-    rust
     vagrant
     systemd
+    tmux
+    tmuxinator
 )
 
 source $ZSH/oh-my-zsh.sh

@@ -1,5 +1,5 @@
 rofi.modi: drun,window
-rofi.font: Fira Sans Condensed SemiBold 13
+rofi.font: Fira Sans Condensed SemiBold 20
 rofi.bw: 1
 rofi.fixed-num-lines: true
 rofi.separator-style: none
@@ -9,21 +9,20 @@ rofi.hide-scrollbar: true
 rofi.display-drun: Run
 rofi.display-window: Window
 
-rofi.width:              50
+rofi.width:              60
 rofi.column:             1
 rofi.location:           0
-rofi.lines:              10
-rofi.padding:            26
-rofi.sidebar-mode:       true
+rofi.lines:              8
+rofi.padding:            50
+rofi.sidebar-mode:       false
 rofi.fullscreen:         false
 rofi.fake-transparency:  false
 rofi.color-enabled:      true
 
-!!                  bg       border   separator
-rofi.color-window:  #282828, #ebdbb2, #ebdbb2
+!!                  bg             border         separator
+rofi.color-window:  argb:b02e3440, argb:b081a1c1, argb:00eceff4
 
-!!                  bg       fg       bg-alt   hl-bg    hl-fg
-rofi.color-normal:  #282828, #ebdbb2, #282828, #fb4934, #ebdbb2
-rofi.color-active:  #282828, #282828, #282828, #458588, #282828
-rofi.color-urgent:  #cc241d, #282828, #cc241d, #cc241d, #282828
-rofi.color-urgent:  #282828, #282828, #282828, #282828, #282828
+!!                  bg             fg             bg-alt         hl-bg          hl-fg
+rofi.color-normal:  argb:002e3440, argb:ffd8dee9, argb:002e3440, argb:665e81ac, argb:ffc5c8c6
+rofi.color-active:  argb:002e3440, argb:d02e3440, argb:d02e3440, argb:d0a3685a, argb:d02e3440
+rofi.color-urgent:  argb:d0bf616a, argb:d02e3440, argb:d0bf616a, argb:d0bf616a, argb:d02e3440
