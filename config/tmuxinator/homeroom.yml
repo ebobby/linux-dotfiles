@@ -1,0 +1,32 @@
+# /home/fms/.config/tmuxinator/homeroom.yml
+
+name: homeroom
+root: ~/Projects/homeroom/devenv
+
+on_project_start:
+  - vagrant up
+  - xset r rate 250 50
+
+on_project_stop:
+  - vagrant halt
+  - xset r rate 250 50
+
+windows:
+  - app:
+      layout: even-horizontal
+      panes:
+        - api:
+            - vagrant ssh
+            - api
+            - clear
+        - frontend:
+            - vagrant ssh
+            - frontend
+            - clear
+  - repl:
+      - vagrant ssh
+      - api
+      - clear
+  - tests:
+      - vagrant ssh
+      - clear
