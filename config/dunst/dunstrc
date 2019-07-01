@@ -64,7 +64,7 @@
     frame_width = 2
 
     # Defines color of the frame around the notification window.
-    frame_color = "#5e81ac"
+    frame_color = "#bd93f9"
 
     # Define a color for the separator.
     # possible values are:
@@ -243,19 +243,19 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#2e3440"
-    foreground = "#d8dee9"
+    background = "#282a36"
+    foreground = "#f8f8f2"
     timeout = 10
 
 [urgency_normal]
-    background = "#2e3440"
-    foreground = "#eceff4"
+    background = "#282a36"
+    foreground = "#f8f8f2"
     timeout = 10
 
 [urgency_critical]
-    background = "#2e3440"
-    foreground = "#eceff4"
-    frame_color = "#bf616a"
+    background = "#282a36"
+    foreground = "#f8f8f2"
+    frame_color = "#ff6e67"
     timeout = 0
 
 # Every section that isn't one of the above is interpreted as a rules to

@@ -33,7 +33,7 @@ popup_during_fullscreen smart
 workspace_auto_back_and_forth yes
 
 # Background image
-exec_always --no-startup-id feh --bg-scale ~/.wallpapers/adventure-aircraft-airship-36487.jpg
+exec_always --no-startup-id feh --bg-scale ~/.wallpapers/house_fairy_tale_art_light_night_101615_3840x2160.jpg
 # Authentication agent
 exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # Automatic screen lock
@@ -195,11 +195,12 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # class                 border  bground text    indicator child_border
-client.focused          #ff79c6 #282a36 #f8f8f2 #f8f8f2 #ff79c6
-client.focused_inactive #282a36 #f8f8f2 #f8f8f2 #282a36 #282a36
-client.unfocused        #282a36 #282a36 #282a36 #282a36 #282a36
-client.urgent           #282a36 #ff5555 #f8f8f2 #ff5555 #ff5555
-client.placeholder      #282a36 #282a36 #f8f8f2 #282a36 #282a36
+client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
+client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
+client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
+client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
+client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
+client.background       #F8F8F2
 
 bindsym XF86MonBrightnessDown      exec --no-startup-id "xbacklight -dec 5 ; sleep 1; xbacklight -get"
 bindsym XF86MonBrightnessUp        exec --no-startup-id "xbacklight -inc 5 ; sleep 1; xbacklight -get"
@@ -213,7 +214,6 @@ bindsym Print                      exec --no-startup-id gnome-screenshot --inter
 bindsym Pause                      exec --no-startup-id xscreensaver-command -lock
 
 # Assign apps to workspaces, makes for faster setup
-assign [class="Google-chrome"] $ws1
 assign [class="Firefox Developer Edition"] $ws1
 assign [class="Emacs"] $ws2
 assign [class="Termite"] $ws3

@@ -13,16 +13,16 @@ rofi.width:              60
 rofi.column:             1
 rofi.location:           0
 rofi.lines:              8
-rofi.padding:            50
+rofi.padding:            45
 rofi.sidebar-mode:       false
 rofi.fullscreen:         false
 rofi.fake-transparency:  false
 rofi.color-enabled:      true
 
-!!                  bg             border         separator
-rofi.color-window:  argb:b02e3440, argb:b081a1c1, argb:00eceff4
+!! Property Name    BG       Border   Separator
+rofi.color-window:  #3a3c4e, #bd93f9, #282936
 
-!!                  bg             fg             bg-alt         hl-bg          hl-fg
-rofi.color-normal:  argb:002e3440, argb:ffd8dee9, argb:002e3440, argb:665e81ac, argb:ffc5c8c6
-rofi.color-active:  argb:002e3440, argb:d02e3440, argb:d02e3440, argb:d0a3685a, argb:d02e3440
-rofi.color-urgent:  argb:d0bf616a, argb:d02e3440, argb:d0bf616a, argb:d0bf616a, argb:d02e3440
+!! Property Name    BG       FG       BG-alt   Head-BG  Head-FG
+rofi.color-normal:  #3a3c4e, #e9e9f4, #3a3c4e, #bd93f9, #f7f7fb
+rofi.color-active:  #3a3c4e, #62d6e8, #3a3c4e, #bd93f9, #62d6e8
+rofi.color-urgent:  #3a3c4e, #ea51b2, #3a3c4e, #3a3c4e, #ea51b2
