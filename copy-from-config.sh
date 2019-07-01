@@ -11,10 +11,10 @@ cp ~/.xprofile ./xprofile
 cp ~/.xscreensaver ./xscreensaver
 cp ~/.zshrc ./zshrc
 
-cp -R ~/.config/PulseEffects ./config/PulseEffects/
+cp -R ~/.config/PulseEffects/* ./config/PulseEffects/
 cp -R ~/.config/i3/* ./config/i3/
 cp -R ~/.config/polybar/* ./config/polybar/
-cp -R ~/.config/tmuxinator/ ./config/tmuxinator/
+cp -R ~/.config/tmuxinator/* ./config/tmuxinator/
 cp ~/.config/compton.conf ./config/compton.conf
 cp ~/.config/dunst/dunstrc ./config/dunst/dunstrc
 cp ~/.config/gtk-3.0/gtk.css ./config/gtk-3.0/gtk.css
