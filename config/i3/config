@@ -215,6 +215,7 @@ bindsym Pause                      exec --no-startup-id xscreensaver-command -lo
 
 # Assign apps to workspaces, makes for faster setup
 assign [class="Firefox Developer Edition"] $ws1
+assign [class="firefoxdeveloperedition"] $ws1
 assign [class="Emacs"] $ws2
 assign [class="Termite"] $ws3
 for_window [class="Spotify"] move to workspace $ws4
