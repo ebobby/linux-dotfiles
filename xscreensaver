@@ -1,5 +1,5 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-demo 5.42 for fms on Mon Mar 18 13:51:21 2019.
+# Written by xscreensaver-demo 5.44 for fms on Tue Apr 28 09:44:52 2020.
 # https://www.jwz.org/xscreensaver/
 
 timeout:	0:10:00
@@ -35,7 +35,7 @@ chooseRandomImages: False
 imageDirectory:	
 
 mode:		one
-selected:	204
+selected:	183
 
 textMode:	file
 textLiteral:	XScreenSaver
@@ -277,6 +277,11 @@ programs:								      \
   GL: 				razzledazzle -root			    \n\
 				vfeedback -root				    \n\
   GL: 				handsy -root				    \n\
+				scooter -root				    \n\
+  GL: 				deepstars -root				    \n\
+  GL: 				gravitywell -root			    \n\
+  GL: 				etruscanvenus -root			    \n\
+  GL: 				gibson -root				    \n\
 
 
 pointerPollTime:    0:00:05

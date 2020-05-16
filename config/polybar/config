@@ -30,7 +30,7 @@ white-alt   =  ${xrdb:color15}
 
 [bar/mybar]
 width = 100%
-height = 27
+height = 22
 radius = 0.0
 fixed-center = true
 
@@ -38,17 +38,19 @@ background = ${colors.bg}
 foreground = ${colors.fg}
 
 border-size = 0
-line-size = 3
+line-size = 2.5
 
-spacing = 0
-padding = 2
-module-margin-left = 1
-module-margin-right = 2
+;spacing = 0
+padding-left = 0
+padding-right = 0
+module-margin-left = 5
+module-margin-right = 0
 
-font-0 = FiraSansCondensed:pixelsize=12:style=ExtraBold
-font-1 = FontAwesome5Free:pixelsize=12
-font-2 = FontAwesome5Brands:pixelsize=12
-font-3 = FontAwesome5FreeSolid:pixelsize=12
+;font-0 = FireSansSemiBold:fontformat=truetype:size=10
+font-0 = Cantarell:pixelsize=12:style=Bold
+font-1 = FontAwesome5Free:pixelsize=11
+font-2 = FontAwesome5Brands:pixelsize=11
+font-3 = FontAwesome5FreeSolid:pixelsize=11
 
 modules-left = i3
 modules-center = xwindow
@@ -64,10 +66,10 @@ index-sort = true
 strip-wsnumbers = true
 
 label-focused = %name%
-label-focused-foreground = ${colors.blue}
+label-focused-foreground = ${colors.magenta}
 label-focused-background = ${colors.bg}
 label-focused-padding = 2
-label-focused-underline = ${colors.blue}
+label-focused-underline = ${colors.magenta}
 
 label-unfocused = %name%
 label-unfocused-foreground = ${colors.bg-alt}

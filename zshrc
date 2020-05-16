@@ -23,16 +23,19 @@ plugins=(
   cargo
   colored-man-pages
   common-aliases
-  git
   fzf
-  nvm
-  npm
+  git
   node
-  ruby
+  npm
+  nvm
+  pip
+  pyenv
+  python
   rbenv
-  vagrant
+  ruby
   systemd
   tmux
+  vagrant
   tmuxinator
 )
 

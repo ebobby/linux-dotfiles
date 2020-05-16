@@ -16,12 +16,12 @@ set $mod Mod4
 gaps inner 0
 gaps outer 0
 
+# window border settings
+new_window pixel 1
+new_float pixel 1
+
 # control focused window when follows the mouse movements
 focus_follows_mouse no
-
-# window border settings
-default_border          pixel 1
-default_floating_border pixel 1
 
 # hiding borders adjacent to the screen edges
 hide_edge_borders smart
@@ -33,7 +33,7 @@ popup_during_fullscreen smart
 workspace_auto_back_and_forth yes
 
 # Background image
-exec_always --no-startup-id feh --bg-scale ~/.wallpapers/house_fairy_tale_art_light_night_101615_3840x2160.jpg
+exec_always --no-startup-id feh --bg-fill ~/.wallpapers/Space.png
 # Authentication agent
 exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # Automatic screen lock
@@ -41,7 +41,7 @@ exec_always --no-startup-id xscreensaver -no-splash
 # Fast typing
 exec_always --no-startup-id xset r rate 250 50
 # Composite
-exec_always --no-startup-id compton
+exec_always --no-startup-id picom
 # Notifications
 exec_always --no-startup-id dunst
 # Remove mouse when unused
@@ -59,13 +59,13 @@ exec_always --no-startup-id /bin/sh -c "pgrep cbatticon || cbatticon"
 # Redshift
 #exec_always --no-startup-id /bin/sh -c "pgrep redshift-gtk || (/usr/lib/geoclue-2.0/demos/agent | redshift-gtk)"
 # Dropbox
-exec_always --no-startup-id dropbox
+exec_always --no-startup-id insync
 # Pulse Effects
 exec_always --no-startup-id pulseeffects --gapplication-service
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango: Fira Sans Condensed Bold 11
+font xft:Monofur Regular 11
 
 set $term --no-startup-id termite
 
@@ -125,7 +125,7 @@ bindsym $mod+minus scratchpad show
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1    "1: "
+set $ws1    "1: "
 set $ws2    "2: "
 set $ws3    "3: "
 set $ws4    "4: "
@@ -194,14 +194,6 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-# class                 border  bground text    indicator child_border
-client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
-client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
-client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
-client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
-client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
-client.background       #F8F8F2
-
 bindsym XF86MonBrightnessDown      exec --no-startup-id "xbacklight -dec 5 ; sleep 1; xbacklight -get"
 bindsym XF86MonBrightnessUp        exec --no-startup-id "xbacklight -inc 5 ; sleep 1; xbacklight -get"
 bindsym XF86AudioRaiseVolume       exec --no-startup-id amixer set Master 5%+
@@ -214,7 +206,7 @@ bindsym Print                      exec --no-startup-id gnome-screenshot --inter
 bindsym Pause                      exec --no-startup-id xscreensaver-command -lock
 
 # Assign apps to workspaces, makes for faster setup
-assign [class="Firefox Developer Edition"] $ws1
+assign [class="Google-chrome"] $ws1
 assign [class="firefoxdeveloperedition"] $ws1
 assign [class="Emacs"] $ws2
 assign [class="Termite"] $ws3
@@ -229,7 +221,6 @@ for_window [class="Gnome-disks"]                   floating enable
 for_window [class="Gnome-system-monitor"]          floating enable
 for_window [class="Lightdm-gtk-greeter-settings"]  floating enable
 for_window [class="Lxappearance"]                  floating enable
-for_window [class="Nautilus"]                      floating enable
 for_window [class="Org.gnome.Weather.Application"] floating enable
 for_window [class="Pavucontrol"]                   floating enable
 for_window [class="Seahorse"]                      floating enable
@@ -241,3 +232,36 @@ for_window [window_role="app"]                     floating enable
 for_window [window_role="page-info"]               floating enable
 for_window [window_role="pop-up"]                  floating enable
 for_window [window_role="task_dialog"]             floating enable
+
+######################################################################################################
+## COLORS
+######################################################################################################
+set_from_resource $background background
+set_from_resource $foreground foreground
+set_from_resource $color0   color0
+set_from_resource $color1   color1
+set_from_resource $color2   color2
+set_from_resource $color3   color3
+set_from_resource $color4   color4
+set_from_resource $color5   color5
+set_from_resource $color6   color6
+set_from_resource $color7   color7
+set_from_resource $color8   color8
+set_from_resource $color9   color9
+set_from_resource $color10  color10
+set_from_resource $color11  color11
+set_from_resource $color12  color12
+set_from_resource $color13  color13
+set_from_resource $color14  color14
+set_from_resource $color15  color15
+
+# Theme colors
+# class                 border    backgr.   text      indic.    child_border
+# My colors
+client.background       $background
+
+client.focused          $foreground $background $foreground $foreground $foreground
+client.unfocused        $foreground $background $foreground $color8 $color8
+client.focused_inactive $foreground $background $foreground $color8 $color8
+client.urgent           $foreground $background $foreground $color8 $color8
+client.placeholder      $foreground $background $foreground $color8 $color8

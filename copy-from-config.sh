@@ -15,7 +15,7 @@ cp -R ~/.config/PulseEffects/* ./config/PulseEffects/
 cp -R ~/.config/i3/* ./config/i3/
 cp -R ~/.config/polybar/* ./config/polybar/
 cp -R ~/.config/tmuxinator/* ./config/tmuxinator/
-cp ~/.config/compton.conf ./config/compton.conf
+cp ~/.config/picom.conf ./config/picom.conf
 cp ~/.config/dunst/dunstrc ./config/dunst/dunstrc
 cp ~/.config/gtk-3.0/gtk.css ./config/gtk-3.0/gtk.css
 cp ~/.config/htop/htoprc ./config/htop/htoprc
