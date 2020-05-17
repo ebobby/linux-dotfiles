@@ -13,12 +13,12 @@ scrollback_lines = -1
 search_wrap = true
 urgent_on_bell = true
 hyperlinks = false
-font = Source Code Pro 13
-# "block", "underline" or "ibeam"
 cursor_shape = block
-
-# "off", "left" or "right"
 scrollbar = off
+
+#font = Source Code Pro 13
+#font = Liberation Mono 13
+font = JetBrains Mono 13
 
 [colors]
 cursor = #d8dee9
@@ -26,7 +26,7 @@ cursor_foreground = #2e3440
 
 foreground = #d8dee9
 foreground_bold = #d8dee9
-background = 	rgba(46,52,64, 0.95)
+background = 	rgba(46,52,64, 0.75)
 
 highlight = #4c566a
 

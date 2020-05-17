@@ -33,7 +33,7 @@ popup_during_fullscreen smart
 workspace_auto_back_and_forth yes
 
 # Background image
-exec_always --no-startup-id feh --bg-fill ~/.wallpapers/Space.png
+exec_always --no-startup-id feh --bg-fill ~/.wallpapers/surfing-astronaut.jpg
 # Authentication agent
 exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # Automatic screen lock
