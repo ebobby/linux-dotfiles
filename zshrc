@@ -23,6 +23,7 @@ plugins=(
   cargo
   colored-man-pages
   common-aliases
+  emacs
   fzf
   git
   node

@@ -21,28 +21,54 @@ scrollbar = off
 font = JetBrains Mono 13
 
 [colors]
-cursor = #d8dee9
-cursor_foreground = #2e3440
 
-foreground = #d8dee9
-foreground_bold = #d8dee9
-background = 	rgba(46,52,64, 0.75)
+# special
+foreground      = #cedbe5
+foreground_bold = #cedbe5
+cursor          = #cedbe5
+background      = rgba(13, 14, 22, 0.9)
 
-highlight = #4c566a
+color0  = #0f1019
+color8  = #1e1e33
+color1  = #d83441
+color9  = #d83441
+color2  = #79d836
+color10 = #79d836
+color3  = #d8b941
+color11 = #d8b941
+color4  = #3679d8
+color12 = #3679d8
+color5  = #8041d8
+color13 = #8041d8
+color6  = #36d8bd
+color14 = #36d8bd
+color7  = #d0d0d0
+color15 = #d0d0d0
 
-color0  = #3b4252
-color1  = #bf616a
-color2  = #a3be8c
-color3  = #ebcb8b
-color4  = #81a1c1
-color5  = #b48ead
-color6  = #88c0d0
-color7  = #e5e9f0
-color8  = #4c566a
-color9  = #bf616a
-color10 = #a3be8c
-color11 = #ebcb8b
-color12 = #81a1c1
-color13 = #b48ead
-color14 = #8fbcbb
-color15 = #eceff4
+# Nord
+#[colors]
+#cursor = #d8dee9
+#cursor_foreground = #2e3440
+#
+#foreground = #d8dee9
+#foreground_bold = #d8dee9
+#background = 	rgba(46,52,64, 0.90)
+#
+#highlight = #4c566a
+#
+#color0  = #3b4252
+#color1  = #bf616a
+#color2  = #a3be8c
+#color3  = #ebcb8b
+#color4  = #81a1c1
+#color5  = #b48ead
+#color6  = #88c0d0
+#color7  = #e5e9f0
+#color8  = #4c566a
+#color9  = #bf616a
+#color10 = #a3be8c
+#color11 = #ebcb8b
+#color12 = #81a1c1
+#color13 = #b48ead
+#color14 = #8fbcbb
+#color15 = #eceff4

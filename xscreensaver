@@ -1,5 +1,5 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-demo 5.44 for fms on Tue Apr 28 09:44:52 2020.
+# Written by xscreensaver-demo 5.44 for fms on Mon Jun  8 09:39:58 2020.
 # https://www.jwz.org/xscreensaver/
 
 timeout:	0:10:00
@@ -35,7 +35,7 @@ chooseRandomImages: False
 imageDirectory:	
 
 mode:		one
-selected:	183
+selected:	204
 
 textMode:	file
 textLiteral:	XScreenSaver

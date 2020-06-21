@@ -66,10 +66,10 @@ index-sort = true
 strip-wsnumbers = true
 
 label-focused = %name%
-label-focused-foreground = ${colors.cyan-alt}
+label-focused-foreground = ${colors.magenta-alt}
 label-focused-background = ${colors.bg}
 label-focused-padding = 2
-label-focused-underline = ${colors.cyan-alt}
+label-focused-underline = ${colors.magenta-alt}
 
 label-unfocused = %name%
 label-unfocused-foreground = ${colors.bg-alt}

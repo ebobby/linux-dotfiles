@@ -28,7 +28,4 @@ unalias rm
 # Aliases
 alias txk='tmuxinator stop'
 
-# Variables
-export EDITOR="emacsclient --no-wait"
-
 neofetch

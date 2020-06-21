@@ -29,4 +29,5 @@ windows:
       - clear
   - tests:
       - vagrant ssh
+      - api
       - clear

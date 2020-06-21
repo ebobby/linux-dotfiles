@@ -211,7 +211,8 @@ assign [class="firefoxdeveloperedition"] $ws1
 assign [class="Emacs"] $ws2
 assign [class="Termite"] $ws3
 for_window [class="Spotify"] move to workspace $ws4
-assign [class="Gthumb"] $ws5
+assign [class="Gthumb"] $ws6
+assign [class="todoist"] $ws8
 assign [class="zoom"] $ws9
 assign [class="Slack"] $ws10
 
